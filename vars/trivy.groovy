@@ -1,3 +1,3 @@
-def trivy_fs(){
-  sh "trivy fs . -o result.json"
+def call() {
+    sh "trivy fs . -o result.json"
 }
