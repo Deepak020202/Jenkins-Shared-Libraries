@@ -1,4 +1,4 @@
-def call(String credId , String ImageName){
+def docker_push(String credId , String ImageName){
    stage("Push to Docker Hub") {
             steps {
                 withCredentials([usernamePassword(
