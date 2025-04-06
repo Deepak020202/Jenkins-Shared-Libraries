@@ -1,3 +1,6 @@
-def clone(String url , String branch){
-    git url: "${url}", branch: "${branch}"
+def call(String url, String branch) {
+    checkout([$class: 'GitSCM',
+        branches: [[name: "*/${branch}"]],
+        userRemoteConfigs: [[url: url]]
+    ])
 }
