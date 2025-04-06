@@ -1,6 +1,3 @@
-
-def docker_build(String ImageName){ 
-
-sh "docker build -t "${ImageName}"
-
+def call(String imageName) {
+    sh "docker build -t ${imageName} ."
 }
